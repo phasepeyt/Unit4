@@ -33,8 +33,14 @@ Rewrite the code from part 1 using knowledge from part 2.
 '''
 
 single_fruit = ['apple','banana','watermelon','grape']
+multi_fruit = []
 for item in single_fruit:
-    print(f"{item}s")
+    multi_fruit.append(f"{item}s")
+
+
+
+for item in multi_fruit:
+    print(item)
 
 
 
