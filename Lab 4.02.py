@@ -21,30 +21,30 @@ Provide a few examples that confirm pluralize_words works as expected:
 
     What if the list is empty? just puts s
 
-    
+    '''
 
-def pluralize_words():
-    mystr = input("what would u like to pluralize? ")
-    if mystr.endswith('y') == True:
-        word = mystr.replace('y','ies')
-        print(word)
+# def pluralize_words():
+#     mystr = input("what would u like to pluralize? ")
+#     if mystr.endswith('y') == True:
+#         word = mystr.replace('y','ies')
+#         print(word)
         
-    else:
-        print(f"{mystr}s")
+#     else:
+#         print(f"{mystr}s")
 
-pluralize_words()
+# pluralize_words()
 
 
 
-'''
+
 def pluralize_words(word_list):
-    for item in word_list:
-        if item.endswith('y') == True:
-         word = item.replace('y','ies')
-         print(word)
-        
+    for c in range(len(word_list)):
+        if word_list[c][-1] == 'y':
+            word_list[c] = word_list[c][:len(word_list[c]) - 1] + 'ies'
         else:
-         print(f"{item}s")
+            word_list[c] += 's'
+
+        
 
 word_list = ['apple','berry','melon']
 print(f"singular words: {word_list}")
